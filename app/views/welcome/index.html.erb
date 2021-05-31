@@ -75,69 +75,23 @@
 <div id="main">
   <article><h1>Please Enter Player Information</h1>
 <br>
-    <form>
-      <p>
-        <label for="a">Author:</label>
-        <input id="a" type="text">
-      </p>
-      <br>
-      <p>
-        <label for="a">Player Name:</label>
-        <input id="a" type="text">
-      </p>
-      <br>
-      <p>
-        <label for="a">College:</label>
-        <input id="a" type="text">
-      </p>
-      <br>
-      <p>
-        <label for="a">Position:</label>
-        <input id="a" type="text">
-      </p>
-      <br>
-      <p>
-        <label for="a">Positions (Flex):</label>
-        <input id="a" type="text">
-      </p>
-      <br>
-      <p>
-        <label for="a">Height (Inches):</label>
-        <input id="a" type="text">
-      </p>
-      <br>
-      <p>
-        <label for="a">Weight (Pounds):</label>
-        <input id="a" type="text">
-      </p>
-      <br>
-      <p class="formfield">
-        <label for="a">Athletic Ability:</label>
-        <textarea id="a" type="text" size="50" style="height:200px;"  name="Text1" cols="40" rows="5"> </textarea>
-      </p>
-      <br>
-      <p class="formfield">
-        <label for="a">Strengths:</label>
-        <textarea id="a" type="text" size="50" style="height:200px;"  name="Text1" cols="40" rows="5"> </textarea>
-      </p>
-      <br>
-      <p class="formfield">
-        <label for="a">Weaknesses:</label>
-        <textarea id="a" type="text" size="50" style="height:200px;"  name="Text1" cols="40" rows="5"> </textarea>
-      </p>
-      <br>
-      <p class="formfield">
-        <label for="a">Summary:</label>
-        <textarea id="a" type="text" size="50" style="height:200px;"  name="Text1" cols="40" rows="5"> </textarea>
-      </p>
-      <br>
-      <p>
-        <label for="a">Overall Grade:</label>
-        <input id="a" type="text">
-      </p>
-      <br>
-      <input type="submit">
-    </form>
+    <%= form_for :player_info do |f| %>
+      Author: <%= f.text_field :author %><br/><br>
+      Player Name: <%= f.text_field :player_name %><br/><br>
+      College: <%= f.text_field :college %><br/><br>
+      Position: <%= f.text_field :position %><br/><br>
+      Positions (Flex): <%= f.text_field :positions_flex %><br/><br>
+      Height (Inches): <%= f.text_field :height %><br/><br>
+      Weight (Pounds): <%= f.text_field :weight %><br/><br>
+      Athletic Ability: <%= f.text_area :athletic_ability %><br/><br>
+      Strengths: <%= f.text_area :strengths %><br/><br>
+      Weaknesses: <%= f.text_area :weaknesses %><br/><br>
+      Summary: <%= f.text_area :summary %><br/><br>
+      Overall Grade: <%= f.text_field :grade %><br/><br>
+
+      <%= f.submit %>
+    <% end %>
+
 
 
 
