@@ -75,7 +75,7 @@
 <div id="main">
   <article><h1>Please Enter Player Information</h1>
 <br>
-    <%= form_for :player_info do |f| %>
+    <%= form_for :player_info,url: players_url do |f| %>
       Author: <%= f.text_field :author %><br/><br>
       Player Name: <%= f.text_field :player_name %><br/><br>
       College: <%= f.text_field :college %><br/><br>
