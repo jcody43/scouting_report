@@ -1,15 +1,11 @@
 Rails.application.routes.draw do
   get 'welcome/index'
-  get '/new_post' => 'application#new_post'
+  get '/new_player' => 'application#new_player'
   resources :players do
     resource :players, controller: 'players'
   end
-
-  resources :articles do
-    resources :comments
-    resources :description
-    root 'welcome#index'
+  resources :players
+    resources :players, only: [:new, :create]
 
 
 end
-  end
